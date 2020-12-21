@@ -15,11 +15,5 @@ namespace RestWithASPNET5.Model
         public string Gender { get; set; }
 
 
-
-
-
-
-
-
     }
 }
