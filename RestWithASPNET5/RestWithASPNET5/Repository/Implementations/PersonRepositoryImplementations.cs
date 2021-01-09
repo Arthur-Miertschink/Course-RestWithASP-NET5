@@ -4,13 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace RestWithASPNET5.Bussiness.Implementations
+namespace RestWithASPNET5.Repository.Implementations
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementations : IPersonRepository
     {
         private MySQLContext _context;
 
-        public PersonServiceImplementation(MySQLContext context)
+        public PersonRepositoryImplementations(MySQLContext context)
         {
             _context = context;
         }
@@ -83,7 +83,7 @@ namespace RestWithASPNET5.Bussiness.Implementations
             return person;
         }
 
-        private bool Exists(long id)
+        public bool Exists(long id)
         {
             return _context.People.Any(p => p.Id.Equals(id)) ;
         }

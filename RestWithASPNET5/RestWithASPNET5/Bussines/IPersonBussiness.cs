@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace RestWithASPNET5.Bussiness.Implementations
 {
-    public interface IPersonService
+    public interface IPersonBussiness
     {
 
         Person Create(Person person);
