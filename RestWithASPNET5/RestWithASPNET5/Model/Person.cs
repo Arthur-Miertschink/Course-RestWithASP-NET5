@@ -11,7 +11,7 @@ namespace RestWithASPNET5.Model
     public class Person
     {
         [Column("id")]
-       
+
         public long Id { get; set; }
 
         [Column("firstname")]
@@ -25,7 +25,6 @@ namespace RestWithASPNET5.Model
 
         [Column("gender")]
         public string Gender { get; set; }
-
-
     }
+
 }

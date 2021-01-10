@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 namespace RestWithASPNET5.Bussiness.Implementations
 {
-    public interface IPersonService
+    public interface IBookBussiness
     {
 
-        Person Create(Person person);
+        Book Create(Book book);
 
-        Person FindByID(long id);
+        Book FindByID(long id);
 
-        List<Person> FindAll();
+        List<Book> FindAll();
         
-        Person Update(Person person);
+        Book Update(Book book);
 
         void Delete(long id);
 

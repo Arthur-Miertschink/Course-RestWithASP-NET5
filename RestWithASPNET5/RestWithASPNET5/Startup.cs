@@ -17,6 +17,8 @@ using RestWithASPNET5.Bussiness.Implementations;
 using RestWithASPNET5.Repository;
 using RestWithASPNET5.Repository.Implementations;
 using Serilog;
+using RestWithASPNETUdemy.Repository;
+using RestWithASPNETUdemy.Repository.Implementations;
 
 namespace RestWithASPNET5
 {
@@ -55,8 +57,10 @@ namespace RestWithASPNET5
             services.AddApiVersioning();
 
             // Injeção de dependência
-            services.AddScoped<IPersonBussiness, PersonBussinessImplementation>();
+            services.AddScoped<IBookRepository, BookRepositoryImplementation>();
+            services.AddScoped<IBookBussiness, BookBussinessImplementation>();
             services.AddScoped<IPersonRepository, PersonRepositoryImplementations>();
+            services.AddScoped<IPersonBussiness, PersonBussinessImplementation>();
 
             services.AddSwaggerGen(c =>
             {
